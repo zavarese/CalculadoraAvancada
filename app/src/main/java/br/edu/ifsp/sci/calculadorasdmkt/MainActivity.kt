@@ -7,7 +7,7 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
-    var concatenaLcd: Boolean=true 
+    var concatenaLcd: Boolean=true
 /*
     fun onClickZeroPontoResultadoDivisao(view: View?) {
         when (view){
