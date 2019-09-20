@@ -1,4 +1,4 @@
-package br.edu.ifsp.sci.calculadorasdmkt
+package br.edu.ifsp.sci.calculadorasdmkt.Utils
 
 /* Classe de enumeraÃ§Ã£o para constantes de operadores */
 enum class Operador {
@@ -11,12 +11,13 @@ object Calculadora {
     var operando: Float = 0.0f
 
     // operador que serÃ¡ aplicado entre primeiro e segundo operando
-    var operador: Operador = Operador.RESULTADO
+    var operador: Operador =
+        Operador.RESULTADO
 
     /* calcula um valor de retorno com base no operando e operador jÃ¡ existentes, novo valor
      e atualiza valor de operando e operador */
     fun calcula(valor: Float, operador: Operador): Float {
-        when (this.operador) {
+        when (Calculadora.operador) {
             Operador.RESULTADO -> operando = valor
             Operador.ADICAO -> operando += valor
             Operador.SUBTRACAO -> operando -= valor
@@ -25,7 +26,7 @@ object Calculadora {
             Operador.LIMPEZA -> operando = valor*0.0f
             Operador.RAIZ -> operando = Math.sqrt(valor.toDouble()).toFloat()
         }
-        this.operador = operador
+        Calculadora.operador = operador
         return operando
     }
 }
