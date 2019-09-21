@@ -20,4 +20,9 @@
     <string name="subreset">CE</string>
     <string name="percent">%</string>
     <string name="raiz">R</string>
+
+    <string-array name="tipo_leiaute">
+        <item>Avançado</item>
+        <item>Básico</item>
+    </string-array>
 </resources>

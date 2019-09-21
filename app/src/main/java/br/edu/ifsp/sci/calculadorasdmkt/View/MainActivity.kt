@@ -2,6 +2,7 @@ package br.edu.ifsp.sci.calculadorasdmkt.View
 
 import android.os.Bundle
 import android.provider.Settings.Global.getString
+import android.view.Menu
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.sci.calculadorasdmkt.R
@@ -19,6 +20,11 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu,menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
 }
