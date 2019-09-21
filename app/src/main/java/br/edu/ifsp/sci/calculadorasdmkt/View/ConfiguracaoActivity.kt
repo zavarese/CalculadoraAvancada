@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import br.edu.ifsp.sci.calculadorasdmkt.*
 import br.edu.ifsp.sci.calculadorasdmkt.Controller.ConfiguracaoController
 import br.edu.ifsp.sci.calculadorasdmkt.Model.Configuracao
 import br.edu.ifsp.sci.calculadorasdmkt.Model.Separador
@@ -17,7 +16,7 @@ class ConfiguracaoActivity: AppCompatActivity()  {
     object Constantes{
         //chave de retorno  para a MainActivity
 
-        val CONFIGURACAO ="ONFIGURACAO"
+        val CONFIGURACAO ="CONFIGURACAO"
 
     }
 
@@ -30,10 +29,9 @@ class ConfiguracaoActivity: AppCompatActivity()  {
         setContentView(R.layout.activity_configuracao)
 
         toolbar.title = "configuracao"
-        //setSupportAction(toolbar)
         setSupportActionBar(toolbar)
 
-        //chamao controller e atualizar view
+        //chama o controller e atualizar view
         configuracaoController = ConfiguracaoController(this)
         configuracaoController.buscaConfiguracao()
     }
