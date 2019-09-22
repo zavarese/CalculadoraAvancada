@@ -3,6 +3,7 @@ package br.edu.ifsp.sci.calculadorasdmkt.View
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.sci.calculadorasdmkt.Controller.ConfiguracaoController
 import br.edu.ifsp.sci.calculadorasdmkt.Model.Configuracao
@@ -61,6 +62,8 @@ class ConfiguracaoActivity: AppCompatActivity()  {
 
         //Chamar o Controller para salvar
         configuracaoController.salvaConfiguracao(novaConfiguracao)
+
+        Toast.makeText(this,"Configuracao salva",Toast.LENGTH_SHORT).show()
     }
 }
 

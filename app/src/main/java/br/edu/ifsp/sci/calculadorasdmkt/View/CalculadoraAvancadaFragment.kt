@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.edu.ifsp.sci.calculadorasdmkt.R
 
-class CalculadoraAvancadaFragment {
-    fun onCreateView(
+class CalculadoraAvancadaFragment: Fragment() {
+    override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?

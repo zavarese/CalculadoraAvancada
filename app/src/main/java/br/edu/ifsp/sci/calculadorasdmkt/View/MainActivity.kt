@@ -1,11 +1,10 @@
 package br.edu.ifsp.sci.calculadorasdmkt.View
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings.Global.getString
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.sci.calculadorasdmkt.Model.Configuracao
 import br.edu.ifsp.sci.calculadorasdmkt.R
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu,menu)
-        return super.onCreateOptionsMenu(menu)
+        return true
     }
 
     object Constantes{
@@ -66,14 +65,15 @@ class MainActivity : AppCompatActivity() {
             //Pegar a configuracao retornada
             val configuracao = data?.getParcelableExtra<Configuracao>(ConfiguracaoActivity.Constantes.CONFIGURACAO)
 
-           /* if(configuracao!!.leiauteAvancado){
+           if(configuracao!!.leiauteAvancado){
                 supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraAvancadaFragment()).commit()
-            }else{*/
-                if(configuracao!!.leiauteAvancado){
+            }else{
+
                     supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
-                }
-            //}
+
+            }
         }
+        supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
 
     }
 
