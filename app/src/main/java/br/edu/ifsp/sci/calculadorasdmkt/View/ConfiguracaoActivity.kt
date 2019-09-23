@@ -16,13 +16,10 @@ import kotlinx.android.synthetic.main.activity_configuracao.*
 class ConfiguracaoActivity: AppCompatActivity()  {
     object Constantes{
         //chave de retorno  para a MainActivity
-
         val CONFIGURACAO ="CONFIGURACAO"
-
     }
 
     //Referencia para Controller
-
     lateinit var configuracaoController: ConfiguracaoController
 
     override fun onCreate(savedInstanceState: Bundle?){

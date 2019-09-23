@@ -53,10 +53,8 @@ class MainActivity : AppCompatActivity() {
         /*
         when(requestCode){
             Constantes.OUTRA_TELA_REQUEST_CODE->{
-
             }
             Constantes.OUTRA_TELA_REQUEST_CODE_2->{
-
             }
         }
          */
@@ -68,9 +66,7 @@ class MainActivity : AppCompatActivity() {
            if(configuracao!!.leiauteAvancado){
                 supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraAvancadaFragment()).commit()
             }else{
-
                     supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
-
             }
         }
         supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
