@@ -50,26 +50,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        /*
-        when(requestCode){
-            Constantes.OUTRA_TELA_REQUEST_CODE->{
-            }
-            Constantes.OUTRA_TELA_REQUEST_CODE_2->{
-            }
-        }
-         */
+
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == Constantes.CONFIGURACOES_REQUEST_CODE && resultCode == AppCompatActivity.RESULT_OK){
             //Pegar a configuracao retornada
             val configuracao = data?.getParcelableExtra<Configuracao>(ConfiguracaoActivity.Constantes.CONFIGURACAO)
 
            if(configuracao!!.leiauteAvancado){
-                supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraAvancadaFragment()).commit()
+               supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraAvancadaFragment()).commit()
             }else{
-                    supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
+               supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
             }
         }
-        supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
+        //supportFragmentManager.beginTransaction().replace(R.id.calculadoraFl, CalculadoraBasicaFragment()).commit()
 
     }
 

@@ -40,10 +40,12 @@ class CalculadoraBasicaFragment: Fragment(), View.OnClickListener {
                     if (!concatenaLcd) {
                         lcdTv.text = "0"
                     }
-                    lcdTv.append(".")
+                    lcdTv.append(",")
                     concatenaLcd = true
+                    //lcdTv.text.toString().replace(",",".",false)
                 }
             }
+
             // Operadores
             adicaoBt -> cliqueOperador(Operador.ADICAO)
             subtracaoBt -> cliqueOperador(Operador.SUBTRACAO)

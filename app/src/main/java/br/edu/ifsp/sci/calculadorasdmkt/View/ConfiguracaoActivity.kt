@@ -50,17 +50,17 @@ class ConfiguracaoActivity: AppCompatActivity()  {
 
     fun onClickSalvaConfiguracao(v: View) {
         //Pega dados da tela
-        val leiauteAvancado = leiauteSpn.selectedItemPosition == 1
+        val leiauteAvancado = leiauteSpn.selectedItemPosition == 0
         val separador = if (pontoRb.isChecked) Separador.PONTO else Separador.VIRGULA
 
         //Criar um objeto Configuracao
         val novaConfiguracao: Configuracao = Configuracao(leiauteAvancado, separador)
-
-
+        
         //Chamar o Controller para salvar
         configuracaoController.salvaConfiguracao(novaConfiguracao)
-
         Toast.makeText(this,"Configuracao salva",Toast.LENGTH_SHORT).show()
+
+        this.finish()
     }
 }
 
